@@ -1,7 +1,7 @@
 /* Swagger configuration */
 const options = {
-	openapi: 'OpenAPI 3',          // Enable/Disable OpenAPI. By default is null
-	language: 'en-US',         // Change response language. By default is 'en-US'
+	openapi: 'OpenAPI 3',   // Enable/Disable OpenAPI. By default is null
+	language: 'en-US',      // Change response language. By default is 'en-US'
 	disableLogs: false,     // Enable/Disable logs. By default is false
 	autoHeaders: false,     // Enable/Disable automatic headers capture. By default is true
 	autoQuery: false,       // Enable/Disable automatic query capture. By default is true

@@ -6,7 +6,7 @@
     "description": "API for Managing queue calls",
     "contact": {
       "name": "API Support",
-      "email": "ankit.r@kaleyra.com"
+      "email": "rajputankit22@gmail.com"
     }
   },
   "host": "localhost:3001",
@@ -64,28 +64,6 @@
             "schema": {
               "$ref": "#/definitions/errorResponse.500"
             }
-          }
-        }
-      }
-    },
-    "/api/v1/queue": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "retry_attempts",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "api-key",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       }
