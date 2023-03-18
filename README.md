@@ -1,4 +1,14 @@
-## boilerplate - manage the call_queues and waiting calls which are inside the available queue.
+## boilerplate - This is the boilerplate combination of multiple things these are given below:-.
+```
+NodeJs
+ExpressJs
+MySql Connection
+Redis Connection
+RabbitMq Connection
+Mocha & Chai
+Swagger
+
+```
 
 ## Dependency 
 1. Dependency installation - guide

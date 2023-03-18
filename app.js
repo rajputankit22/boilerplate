@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 // Prefix for version 1 
 const defaultRoute_v1 = '/api/v1';
 
-// Establishing RabbitMq connection for publishing NRQ Data
+// Establishing RabbitMq connection for messaging
 // const queueObj = new libQueue();
 // queueObj.createConnection(config.rabbitmq, () => {
 // 	logger.info(__file, __func, __line, 'RabbitMQ publisher connected');
