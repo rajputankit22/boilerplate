@@ -41,7 +41,7 @@ Swagger
 ## Postman collection
 Please import this public link
 ```
-https://api.postman.com/collections/2304004-687a915a-6a39-4c50-a159-a5590fa807ea?access_key=PMAT-01GVT77YS6JHBXTF79R9QZPFEA
+https://api.postman.com/collections/2304004-687a915a-6a39-4c50-a159-a5590fa807ea?access_key=
 ```
 
 ## Postman environment for local system
