@@ -1,0 +1,161 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2.0.0",
+    "title": "CloudAgent Apis",
+    "description": "API for Managing queue calls",
+    "contact": {
+      "name": "API Support",
+      "email": "ankit.r@kaleyra.com"
+    }
+  },
+  "host": "localhost:3001",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Queue CRUD",
+      "description": "Queue related apis"
+    },
+    {
+      "name": "Health",
+      "description": "Health Check"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {},
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "This is the health API.",
+        "description": "This API response tells us service is up or down.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Service is",
+            "schema": {
+              "$ref": "#/definitions/helathResponse"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/errorResponse.404"
+            }
+          },
+          "500": {
+            "description": "Server Issue",
+            "schema": {
+              "$ref": "#/definitions/errorResponse.500"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/queue": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "retry_attempts",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "api-key",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "helathResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "CAG001"
+        },
+        "message": {
+          "type": "string",
+          "example": "Service Healthy"
+        }
+      }
+    },
+    "errorResponse.400": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "CAGE002"
+        },
+        "message": {
+          "type": "string",
+          "example": "Mandatory parameters missing or validation failed"
+        }
+      }
+    },
+    "errorResponse.403": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "CAGE001"
+        },
+        "message": {
+          "type": "string",
+          "example": "Api authentication failed"
+        }
+      }
+    },
+    "errorResponse.404": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "404"
+        },
+        "message": {
+          "type": "string",
+          "example": "Not found"
+        }
+      }
+    },
+    "errorResponse.500": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "CAGE003"
+        },
+        "message": {
+          "type": "string",
+          "example": "Something went wrong please try again"
+        }
+      }
+    }
+  }
+}
